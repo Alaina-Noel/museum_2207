@@ -51,7 +51,17 @@ class Museum
     result
   end
 
+  def draw_lottery_winner(exhibit)
+    ticket_lottery_contestants(exhibit).map { |patron| patron.name }.sample
+  end
 
-
+  def announce_lottery_winner(exhibit)
+    if name =! nil
+      name = draw_lottery_winner(exhibit)
+      "#{name} has won the IMAX edhibit lottery"
+    else
+      "No winners for this lottery"
+    end
+  end
 
 end
