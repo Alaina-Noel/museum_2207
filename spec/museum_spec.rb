@@ -9,7 +9,7 @@ RSpec.describe do
     expect(dmns).to be_instance_of(Museum)
   end
 
-  xit 'has a name and empty exhibits list by default as attributes' do
+  it 'has a name and empty exhibits list by default as attributes' do
     dmns = Museum.new("Denver Museum of Nature and Science")
 
     expect(dmns.name).to eq("Denver Museum of Nature and Science")
