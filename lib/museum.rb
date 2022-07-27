@@ -13,7 +13,7 @@ class Museum
   def recommend_exhibits(patron)
     matches = []
     patron.interests.each do |interest|
-    exhibits.each do |exhibit|
+    exhibits.find_all do |exhibit|
       matches << exhibit if interest == exhibit.name
     end
   end
