@@ -16,10 +16,11 @@ RSpec.describe do
     expect(dmns.exhibits).to eq([])
   end
 
-  xit 'can add exhibits' do
+  it 'can add exhibits' do
     dmns = Museum.new("Denver Museum of Nature and Science")
     dead_sea_scrolls = Exhibit.new({name: "Dead Sea Scrolls", cost: 10})
     imax = Exhibit.new({name: "IMAX",cost: 15})
+    gems_and_minerals = Exhibit.new({name: "Gems and Minerals", cost: 0})
     dmns.add_exhibit(gems_and_minerals)
     dmns.add_exhibit(dead_sea_scrolls)
     dmns.add_exhibit(imax)
@@ -27,10 +28,11 @@ RSpec.describe do
     expect(dmns.exhibits).to eq([gems_and_minerals, dead_sea_scrolls, imax])
   end
 
-  xit 'can recommend exhibits to a specific patron' do
+  it 'can recommend exhibits to a specific patron' do
     dmns = Museum.new("Denver Museum of Nature and Science")
     dead_sea_scrolls = Exhibit.new({name: "Dead Sea Scrolls", cost: 10})
     imax = Exhibit.new({name: "IMAX",cost: 15})
+    gems_and_minerals = Exhibit.new({name: "Gems and Minerals", cost: 0})
     dmns.add_exhibit(gems_and_minerals)
     dmns.add_exhibit(dead_sea_scrolls)
     dmns.add_exhibit(imax)
